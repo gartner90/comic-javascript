@@ -27,10 +27,6 @@ var titleForm = 'Login',
 		logued();
 	}
 
-	showComics();
-
-	//console.log(JSON.parse(users));
-
 function btnLogin() {
 	titleForm = 'Login';
 	titleTag.innerHTML = titleForm;
@@ -147,7 +143,7 @@ function logued() {
 	}
 
 	if (firstLogin) {
-		showContent();
+		showComics();
 		firstLogin = false;
 	}
 }
@@ -161,6 +157,8 @@ function signOut() {
 	content.id = 'content';
 	resetErrors();
 }
+
+showContent();
 
 function showContent(){
 	advertising.forEach(function(item, id) {
